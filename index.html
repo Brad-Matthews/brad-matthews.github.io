@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Brad Matthews — Software Developer</title>
-<meta name="description" content="Independent software developer building AI-assisted applications: conversational interfaces, retrieval systems, and the backends underneath them.">
+<title>Brad Matthews — Fintech Product Engineer</title>
+<meta name="description" content="I design and ship consumer financial products end to end — bank data pipelines, money logic, AI guidance layers, and the compliance scaffolding that lets a financial institution say yes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
 <style>
   :root{
     --paper:#FAFAF9; --surface:#FFFFFF; --ink:#16181C; --muted:#5D6370;
@@ -30,33 +30,42 @@
     font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     font-size:17px; line-height:1.65;
   }
-  .wrap{max-width:660px; margin:0 auto; padding:0 28px 110px}
-  header{padding:96px 0 0}
-  .rule-top{height:3px; width:52px; background:var(--accent); border-radius:2px; margin-bottom:34px}
+  .wrap{max-width:720px; margin:0 auto; padding:0 28px 110px}
+  header{padding:92px 0 0}
+  .rule-top{height:3px; width:52px; background:var(--accent); border-radius:2px; margin-bottom:32px}
   h1{
     font-family:Literata,Georgia,serif; font-weight:600;
-    font-size:clamp(38px,7vw,54px); line-height:1.04; letter-spacing:-.02em;
-    margin:0 0 10px;
+    font-size:clamp(38px,7vw,56px); line-height:1.03; letter-spacing:-.022em; margin:0 0 12px;
   }
   .role{
-    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12.5px;
-    letter-spacing:.13em; text-transform:uppercase; color:var(--muted); margin:0;
+    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12.5px; font-weight:500;
+    letter-spacing:.13em; text-transform:uppercase; color:var(--accent); margin:0;
   }
   .lede{
-    font-family:Literata,Georgia,serif; font-size:20px; line-height:1.55;
-    margin:40px 0 0; color:var(--ink);
+    font-family:Literata,Georgia,serif; font-size:21px; line-height:1.52;
+    margin:38px 0 0; color:var(--ink); text-wrap:pretty;
   }
   p{margin:20px 0 0; color:var(--muted)}
-  p.body-ink{color:var(--ink)}
-  section{margin-top:56px}
+  p.ink{color:var(--ink)}
+  strong{color:var(--ink); font-weight:600}
+  section{margin-top:58px}
   h2{
-    font-family:"IBM Plex Mono",monospace; font-size:11.5px; font-weight:500;
+    font-family:"IBM Plex Mono",monospace; font-size:11.5px; font-weight:600;
     letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
-    margin:0 0 18px; padding-bottom:10px; border-bottom:1px solid var(--rule);
+    margin:0 0 20px; padding-bottom:10px; border-bottom:1px solid var(--rule);
   }
+  .rows{display:flex; flex-direction:column; gap:22px}
+  .row{display:grid; grid-template-columns:168px 1fr; gap:22px}
+  .row-k{
+    font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:500;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--ink); padding-top:3px;
+  }
+  .row-v{font-size:15.5px; line-height:1.6; color:var(--muted)}
+  .row-v strong{color:var(--ink)}
+  @media (max-width:620px){ .row{grid-template-columns:1fr; gap:5px} }
   ul.stack{
     list-style:none; margin:0; padding:0;
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:9px 28px;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(205px,1fr)); gap:9px 28px;
   }
   ul.stack li{
     font-family:"IBM Plex Mono",monospace; font-size:13.5px; color:var(--ink);
@@ -66,18 +75,18 @@
     content:""; flex:none; width:4px; height:4px; border-radius:50%;
     background:var(--accent); transform:translateY(-3px);
   }
-  .links{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px}
+  .links{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:13px}
   .links a{
-    color:var(--ink); text-decoration:none; display:inline-flex; gap:12px; align-items:baseline;
+    color:var(--ink); text-decoration:none; display:inline-flex; gap:14px; align-items:baseline;
     border-bottom:1px solid transparent; transition:border-color .15s, color .15s;
   }
   .links a:hover,.links a:focus-visible{color:var(--accent); border-bottom-color:var(--accent)}
   .links .k{
     font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.1em;
-    text-transform:uppercase; color:var(--muted); min-width:74px; flex:none;
+    text-transform:uppercase; color:var(--muted); min-width:78px; flex:none;
   }
   footer{
-    margin-top:72px; padding-top:20px; border-top:1px solid var(--rule);
+    margin-top:74px; padding-top:20px; border-top:1px solid var(--rule);
     font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--muted);
   }
   :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
@@ -90,14 +99,56 @@
   <header>
     <div class="rule-top"></div>
     <h1>Brad Matthews</h1>
-    <p class="role">Independent software developer</p>
+    <p class="role">Fintech product engineer · consumer financial platforms</p>
   </header>
 
-  <p class="lede">I build AI-assisted applications — conversational interfaces, retrieval systems over curated knowledge, and the backends underneath them.</p>
+  <p class="lede">I design and ship financial products end to end — the bank data pipelines, the money logic, the AI layer, and the compliance scaffolding that lets a financial institution say yes.</p>
 
-  <p class="body-ink">Most of my work is end to end: data ingestion and normalization, the API and job infrastructure, the model layer, and the product surface people actually touch. I care about the unglamorous parts — provenance, error handling, and knowing exactly where an answer came from.</p>
+  <p class="ink">My work sits where consumer finance meets applied AI: <strong>bank data aggregation and transaction enrichment</strong>, recurring-payment and subscription detection, cash-flow forecasting, and <strong>conversational financial guidance grounded in governed, auditable sources</strong> rather than model guesswork. I build the whole stack, because in fintech the hard parts live in the seams — between the aggregator and the ledger, between the model and the disclosure.</p>
 
-  <p>Currently working on consumer personal-finance tooling, which has me evaluating financial-education content sources and the APIs that expose them.</p>
+  <p>AI-assisted development lets me cover ground that used to require a team, and I stay deliberately current — rebuilding my toolchain as the models and tooling shift rather than settling into last year's stack. Speed is the point, but only if what ships survives review.</p>
+
+  <p class="ink">So I hold my own work to the standard a bank's reviewers would apply: single-authority architecture, additive migrations behind flags, fail-closed error handling, tenant isolation, PII tokenization, <strong>provenance on every fact an AI surfaces</strong>, and certification evidence for every release. Governance from the first commit, not retrofitted for a security questionnaire.</p>
+
+  <section>
+    <h2>What I work on</h2>
+    <div class="rows">
+      <div class="row">
+        <div class="row-k">Consumer fintech</div>
+        <div class="row-v">Cash-flow forecasting, <strong>safe-to-spend</strong>, balance and bill intelligence, subscription detection and cancellation flows.</div>
+      </div>
+      <div class="row">
+        <div class="row-k">Bank data</div>
+        <div class="row-v">Plaid aggregation, transaction normalization and merchant enrichment, recurring-pattern detection engines.</div>
+      </div>
+      <div class="row">
+        <div class="row-k">AI-native products</div>
+        <div class="row-v">Retrieval over <strong>governed knowledge corpora</strong>, independent verification layers that gate model output before release, refusal-by-default guardrails.</div>
+      </div>
+      <div class="row">
+        <div class="row-k">Platform</div>
+        <div class="row-v">Multi-tenant isolation, event-driven backends, queue infrastructure, audit trails and data-erasure paths.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How I build</h2>
+    <div class="rows">
+      <div class="row">
+        <div class="row-k">Force multiplier</div>
+        <div class="row-v">AI-assisted development treated as infrastructure, not novelty — architecture, implementation, review and test coverage in one loop.</div>
+      </div>
+      <div class="row">
+        <div class="row-k">Deterministic first</div>
+        <div class="row-v">Boring infrastructure under ambitious products. A model is used where it earns its place, never where arithmetic will do.</div>
+      </div>
+      <div class="row">
+        <div class="row-k">Evidence</div>
+        <div class="row-v">If a system can't show which source supported an answer, it isn't finished.</div>
+      </div>
+    </div>
+  </section>
 
   <section>
     <h2>Working with</h2>
@@ -107,7 +158,8 @@
       <li>PostgreSQL · Prisma</li>
       <li>Redis · BullMQ</li>
       <li>Google Vertex AI · Gemini</li>
-      <li>pgvector · retrieval pipelines</li>
+      <li>pgvector · RAG pipelines</li>
+      <li>Plaid · Stripe</li>
       <li>Cloudflare Workers</li>
       <li>Supabase · Railway</li>
     </ul>
@@ -116,9 +168,8 @@
   <section>
     <h2>Elsewhere</h2>
     <ul class="links">
+      <li><a href="https://www.linkedin.com/in/brad-matthews-99926411"><span class="k">LinkedIn</span>linkedin.com/in/brad-matthews</a></li>
       <li><a href="https://github.com/Brad-Matthews"><span class="k">GitHub</span>github.com/Brad-Matthews</a></li>
-      <!-- LINKEDIN: replace the href and the visible text below, then delete this comment -->
-      <li><a href="https://www.linkedin.com/in/REPLACE-ME"><span class="k">LinkedIn</span>linkedin.com/in/REPLACE-ME</a></li>
     </ul>
   </section>
 
