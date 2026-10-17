@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brad Matthews — Software Developer</title>
+<meta name="description" content="Independent software developer building AI-assisted applications: conversational interfaces, retrieval systems, and the backends underneath them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+<style>
+  :root{
+    --paper:#FAFAF9; --surface:#FFFFFF; --ink:#16181C; --muted:#5D6370;
+    --rule:#E4E4E1; --accent:#0F6E66; --accent-soft:#E3EFED;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0D0F12; --surface:#15181C; --ink:#E8E9EC; --muted:#949AA6;
+      --rule:#262A30; --accent:#4FB5A8; --accent-soft:#132724;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0D0F12; --surface:#15181C; --ink:#E8E9EC; --muted:#949AA6;
+    --rule:#262A30; --accent:#4FB5A8; --accent-soft:#132724;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:17px; line-height:1.65;
+  }
+  .wrap{max-width:660px; margin:0 auto; padding:0 28px 110px}
+  header{padding:96px 0 0}
+  .rule-top{height:3px; width:52px; background:var(--accent); border-radius:2px; margin-bottom:34px}
+  h1{
+    font-family:Literata,Georgia,serif; font-weight:600;
+    font-size:clamp(38px,7vw,54px); line-height:1.04; letter-spacing:-.02em;
+    margin:0 0 10px;
+  }
+  .role{
+    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12.5px;
+    letter-spacing:.13em; text-transform:uppercase; color:var(--muted); margin:0;
+  }
+  .lede{
+    font-family:Literata,Georgia,serif; font-size:20px; line-height:1.55;
+    margin:40px 0 0; color:var(--ink);
+  }
+  p{margin:20px 0 0; color:var(--muted)}
+  p.body-ink{color:var(--ink)}
+  section{margin-top:56px}
+  h2{
+    font-family:"IBM Plex Mono",monospace; font-size:11.5px; font-weight:500;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+    margin:0 0 18px; padding-bottom:10px; border-bottom:1px solid var(--rule);
+  }
+  ul.stack{
+    list-style:none; margin:0; padding:0;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:9px 28px;
+  }
+  ul.stack li{
+    font-family:"IBM Plex Mono",monospace; font-size:13.5px; color:var(--ink);
+    display:flex; gap:10px; align-items:baseline;
+  }
+  ul.stack li::before{
+    content:""; flex:none; width:4px; height:4px; border-radius:50%;
+    background:var(--accent); transform:translateY(-3px);
+  }
+  .links{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px}
+  .links a{
+    color:var(--ink); text-decoration:none; display:inline-flex; gap:12px; align-items:baseline;
+    border-bottom:1px solid transparent; transition:border-color .15s, color .15s;
+  }
+  .links a:hover,.links a:focus-visible{color:var(--accent); border-bottom-color:var(--accent)}
+  .links .k{
+    font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--muted); min-width:74px; flex:none;
+  }
+  footer{
+    margin-top:72px; padding-top:20px; border-top:1px solid var(--rule);
+    font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--muted);
+  }
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="rule-top"></div>
+    <h1>Brad Matthews</h1>
+    <p class="role">Independent software developer</p>
+  </header>
+
+  <p class="lede">I build AI-assisted applications — conversational interfaces, retrieval systems over curated knowledge, and the backends underneath them.</p>
+
+  <p class="body-ink">Most of my work is end to end: data ingestion and normalization, the API and job infrastructure, the model layer, and the product surface people actually touch. I care about the unglamorous parts — provenance, error handling, and knowing exactly where an answer came from.</p>
+
+  <p>Currently working on consumer personal-finance tooling, which has me evaluating financial-education content sources and the APIs that expose them.</p>
+
+  <section>
+    <h2>Working with</h2>
+    <ul class="stack">
+      <li>TypeScript · Node.js</li>
+      <li>Next.js · React</li>
+      <li>PostgreSQL · Prisma</li>
+      <li>Redis · BullMQ</li>
+      <li>Google Vertex AI · Gemini</li>
+      <li>pgvector · retrieval pipelines</li>
+      <li>Cloudflare Workers</li>
+      <li>Supabase · Railway</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Elsewhere</h2>
+    <ul class="links">
+      <li><a href="https://github.com/Brad-Matthews"><span class="k">GitHub</span>github.com/Brad-Matthews</a></li>
+      <!-- LINKEDIN: replace the href and the visible text below, then delete this comment -->
+      <li><a href="https://www.linkedin.com/in/REPLACE-ME"><span class="k">LinkedIn</span>linkedin.com/in/REPLACE-ME</a></li>
+    </ul>
+  </section>
+
+  <footer>Built and maintained by Brad Matthews.</footer>
+
+</div>
+</body>
+</html>
